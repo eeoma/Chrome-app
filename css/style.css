@@ -11,21 +11,122 @@
 
 }
 
+
 .hidden {
     display: none;
+}
 
+button,
+input {
+    border:none;
+    border-radius: 10px;
+    font-size: 10px;
+}
+
+button:focus, /* 해당 요소들을 클릭했을때 나타나는 효과들을 없애기 위해 */
+button:hover,  
+button:active,
+input:focus,
+input:hover,
+input:active {
+    outline:none;
+    box-shadow: none;
+
+}
+
+input::placeholder {
+    color: #fff;
+    text-align: center;
+}
+
+ul,
+ol,
+li {
+    list-style-type:none;
+    padding-left:0;
+    margin-left:0;
 }
 
  body{
     font-family: twaysky;
+    color: #fff;
 }
 
-img {
+.bgImg {
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
     z-index: -1;
-    opacity: 80%;
+    opacity: 85%;
+}
+
+/* clock */
+#day {
+    padding-top: 120px;
+    text-align: center;
+    font-size: 46px;
+}
+
+#time {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 40px;
+}
+
+
+/* log-in */
+#login-form {
+    padding: 10px;
+    text-align: center;
+}
+
+#log-in {
+    width: 150px;
+    height: 40px;
+    border-bottom: 3px solid #fff;
+    border-radius: 0;
+    font-size: 14px;
+    background: none;
+    color: whitesmoke;
+
+}
+
+#log-in-btn {
+    height: 40px;
+    font-size: 14px;
+    background: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+#log-in-btn:hover,
+#log-in-btn:active,
+#log-in-btn:focus {
+    cursor: pointer;
+    
+}
+
+/* greeting */
+#greeting {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* todo-list */
+
+
+/* weather */
+.weather-form {
+  position: fixed;
+  bottom: 0px;
+
+}
+
+.weather-icon {
+    padding-top: 15px;
+    width: 30px;
+    height: 30px;
 }
