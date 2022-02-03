@@ -7,19 +7,31 @@
     <title>Chrome App</title>
 </head>
 <body>
-    <form class="hidden" id="login-form">
-        <input required maxlength="15" type="text" placeholder="What is your name?"/>
-        <input type="submit" value="Log In"/>
-    </form>
     <div class="clock">
-        <h2 id="day">0000-00-00</h2>
-        <h2 id="time">00:00:00</h2>
-        <h3 id="clock-greeting"></h3>
+        <h2 id="day"></h2>
+        <h2 id="time"></h2>
     </div>
+    <form class="hidden" id="login-form">
+        <input id="log-in" maxlength="15" type="text" placeholder="What is your name?" required/>
+        <input id="log-in-btn" type="submit" value="Log In"/>
+    </form>
     <h1 id="greeting" class="hidden"></h1>
+    <div class="todolist">
+        <form id="todo-form">
+            <input type="text" placeholder="Write a To Do and Press Enter" required/>
+        </form>
+        <ul id="todo-list"> 
+        </ul>
+    </div>
+    <div class="weather-form">
+        <h3></h3>
+        <span class="hidden" id="weather"></span>   
+    </div>
     <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/todolist.js"></script>
+    <script src="js/weather.js"></script>
 
 </body>
 </html>
