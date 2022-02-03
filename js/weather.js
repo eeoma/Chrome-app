@@ -3,7 +3,6 @@ const API_KEY="2a88980c5f63394d0d0a96b9cad62bc8";
 function onGeoOk(position){
     const lat=position.coords.latitude;
     const lon=position.coords.longitude;
-    console.log("Now, You are in",lat,lon);
     const url=`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
     fetch(url)
     .then(response => response.json())
@@ -11,7 +10,7 @@ function onGeoOk(position){
         const weatherContainer=document.querySelector(".weather-form");
         const cityName=weatherContainer.querySelector("h3");
         const temp=weatherContainer.querySelector("#weather");
-        cityName.innerText=data.name;
+        cityName.innerText=`${data.name}    / ${data.weather[0].main}`;
         temp.innerText=data.weather[0].main;
         const img=document.createElement("img");
         img.className+="weather-icon";
@@ -21,14 +20,17 @@ function onGeoOk(position){
         if(temp.innerText==="Clouds"){
             img.src="assets/clouds.png";
         }
-        if(temp.innerText=="Rain"){
+        if(temp.innerText==="Rain"){
             img.src="assets/rain.png";
         }
-        if(temp.innerText=="Snow"){
-            img.stc="assets/snow.png";
+        if(temp.innerText==="Snow"){
+            img.src="assets/snow.png";
+        }
+        if(temp.innerText==="Thunderstorm"){
+            img.src="assets/thunder.png"
         }
         weatherContainer.appendChild(img);
-    });   /* js가 url를 불러와줌 */
+    }); 
 }
 
 function onGeoError(){
