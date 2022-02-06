@@ -5,6 +5,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'EliceDigitalBaeum_Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LAB디지털';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{
     box-sizing:border-box;
     margin: 0;
@@ -64,15 +78,19 @@ li {
 
 /* clock */
 #day {
-    padding-top: 120px;
+    font-family: LAB디지털;
+    margin-top: 120px;
     text-align: center;
-    font-size: 46px;
+    font-size: 60px;
+    font-weight: 700;
 }
 
 #time {
-    padding-top: 10px;
+    margin-top: 10px;
     text-align: center;
-    font-size: 40px;
+    font-family: LAB디지털;
+    font-size: 50px;
+    font-weight: 700;
 }
 
 
@@ -83,50 +101,86 @@ li {
 }
 
 #log-in {
-    width: 150px;
+    width: 250px;
     height: 40px;
-    border-bottom: 3px solid #fff;
+    border-bottom: 2.5px solid #fff;
     border-radius: 0;
-    font-size: 14px;
+    font-size: 16px;
     background: none;
     color: whitesmoke;
 
 }
 
-#log-in-btn {
-    height: 40px;
-    font-size: 14px;
-    background: none;
-    color: #fff;
-    font-weight: 500;
-}
-
-#log-in-btn:hover,
-#log-in-btn:active,
-#log-in-btn:focus {
-    cursor: pointer;
-    
-}
 
 /* greeting */
 #greeting {
-    padding-top: 20px;
+    margin-top: 20px;
     text-align: center;
     font-size: 30px;
 }
 
 /* todo-list */
+.todolist {
+    text-align: center;
+}
 
+#todo-form {
+    margin-top: 10px;
+}
 
-/* weather */
-.weather-form {
-  position: fixed;
-  bottom: 0px;
+#todo-form input{
+    width: 360px;
+    height: 28px;
+    margin: 10px 0;
+    background-color: rgba( 255, 255, 255, 0.2 );
+    color: whitesmoke;   
+}
+
+#todo-form input:focus{
+    background-color: rgba( 255, 255, 255, 0.5 );
+}
+
+#todo-form input::placeholder {
+    font-size: 14px;
+    color: rgba( 255, 255, 255, 0.6 );
+}
+
+#todo-list li{
+    margin-bottom: 10px;
+    color: whitesmoke;
+    font-family: EliceDigitalBaeum_Regular;
 
 }
 
-.weather-icon {
-    padding-top: 15px;
+#todo-list button {
+    width: 20px;
+    padding: 1px 3px;
+    margin-right: 4px;
+    border-radius:10%;
+    background-color:rgba( 255, 255, 255, 0.2 );
+
+}
+
+/* weather */
+.weather-form {
+  display: flex;
+  position:fixed;
+  bottom: 10px;
+  left: 43%;
+  flex-direction:row;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.weather-form p {
+    padding-top: 5px;
+}
+
+#weather {
+    padding-top: 5px;
+}
+.weather-icon{
     width: 30px;
     height: 30px;
+    padding-bottom: 8px;
 }
