@@ -8,10 +8,10 @@ function onGeoOk(position){
     .then(response => response.json())
     .then(data=> {
         const weatherContainer=document.querySelector(".weather-form");
-        const cityName=weatherContainer.querySelector("h3");
+        const cityName=weatherContainer.querySelector("p");
         const temp=weatherContainer.querySelector("#weather");
-        cityName.innerText=`${data.name}    / ${data.weather[0].main}`;
-        temp.innerText=data.weather[0].main;
+        cityName.innerText=`${data.name}  /`;
+        temp.innerText=`    ${data.weather[0].main}`;
         const img=document.createElement("img");
         img.className+="weather-icon";
         if(temp.innerText==="Clear"){

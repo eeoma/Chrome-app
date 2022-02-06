@@ -28,10 +28,10 @@ function paintTodo(todo){
     const newSpan=document.createElement("span");
     newSpan.innerText=todo.text;  /* text와 id값이 있는 obj를 받기 때문 */
     const button=document.createElement("button");
-    button.innerText="x";
+    button.innerText="🌳";
     button.addEventListener("click",removeTodo);
-    newLi.appendChild(newSpan);
     newLi.appendChild(button);
+    newLi.appendChild(newSpan);
     todoList.appendChild(newLi);
     
 
